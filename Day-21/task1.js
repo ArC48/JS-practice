@@ -5,7 +5,7 @@ class Validator{
     }
 
     isDomain(domain){
-        const domainRegex = /^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9](?:\.[a-zA-Z]{2,})+$/;
+        const domainRegex = /[a-zA-Z0-9][a-zA-Z0-9-.]{1,61}[a-zA-Z0-9]\.[a-zA-Z]{2,}$/;
         return domainRegex.test(String(domain));
     }
 
@@ -23,6 +23,6 @@ class Validator{
 var validator = new Validator();
 
 console.log(validator.isEmail('jshtml@mail.ru'));
-console.log(validator.isDomain('jshtml.net'));
-console.log(validator.isDate('12.05.2020'));
-console.log(validator.isPhone('+(995)558 12-93-36'));
+console.log(validator.isDomain('https://www.messenger.com'));   //work with or without https
+console.log(validator.isDate('12.05.2020'));   //also works with slashes 12/05/2020
+console.log(validator.isPhone('+(995)558 12-93-36'));   //Georgian Format
