@@ -10,7 +10,7 @@ class Cities{
         if(typeof city !== 'string')
             throw new TypeError('parameter is not a string!');
         let regexVar = /&appid/i
-        const indexVar = this.url.match(regexVar).indexVar
+        const indexVar = this.url.match(regexVar).index
         const link = this.url.substring(0, indexVar) + `${city}` +this.url.substring(indexVar, this.url.length);
             return new Promise((resolve, reject) => {
                 get(link, (error, meta, body) =>{
