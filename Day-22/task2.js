@@ -18,7 +18,7 @@ class Cities{
                         const data = JSON.parse(body);
                         resolve(data.wind)
                     }
-                        reject(`We have error, status code: ${statusCode}`);
+                        reject(`We have error, status code: ${meta.status}`);
                 })
             })
         }
