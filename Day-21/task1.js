@@ -26,3 +26,4 @@ console.log(validator.isEmail('jshtml@mail.ru'));
 console.log(validator.isDomain('https://www.messenger.com'));   //work with or without https
 console.log(validator.isDate('12.05.2020'));   //also works with slashes 12/05/2020
 console.log(validator.isPhone('+(995)558 12-93-36'));   //Georgian Format
+
