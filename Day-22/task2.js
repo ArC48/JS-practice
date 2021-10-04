@@ -1,4 +1,4 @@
-class Cities{
+class Countries{
     constructor(url){
         if(typeof url !== 'string'){
             throw new TypeError('URL is not a string')
@@ -24,15 +24,15 @@ class Cities{
         }
     }
 
-const getURL = require('fetch').fetchUrl;
-const urlVar = 'https://api.openweathermap.org/data/2.5/weather?q=&appid=299fb2133133f9d8fc214f5ae28ca753';
-const cities = new Cities(url);
+const get = require('fetch').fetchUrl;
+const url = 'https://api.openweathermap.org/data/2.5/weather?q=&appid=299fb2133133f9d8fc214f5ae28ca753';
+const countries = new Countries(url);
 
 (async() => {
     try{
-        const data = await city.send('Kobuleti');
+        const data = await countries.send('Kobuleti');
         console.log(data);
     }catch(err){
         console.error(err)
     }
-})
+})();
