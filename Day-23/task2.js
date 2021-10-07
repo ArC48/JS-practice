@@ -109,11 +109,11 @@ class DB {
                         for (var j in args[i]) {
                             if (j == 'min') {
                                 if (value[i] < args[i][j]) {
-                                    throw new Error('Error in ForEach1')
+                                    throw new Error('')
                                 }
                             } else if (j == 'max') {
                                 if (args[i][j] < value[i]) {
-                                    throw new Error('Error in ForEach2')
+                                    throw new Error('')
                                 }
                             }
                         }
@@ -121,18 +121,20 @@ class DB {
                         for (var k in args[i]) {
                             if (k == 'min') {
                                 if (value[i] < args[i][k]) {
-                                    throw new Error('Error in ForEach3')
+                                    throw new Error('')
                                 }
                             } else if (k == 'max') {
                                 if (args[i][k] < value[i]) {
-                                    throw new Error('Error in ForEach4')
+                                    throw new Error('')
                                 }
                             }
                         }
                     }
                 }
                 this.NewArr.push(value)
-            } catch (err) {}
+            } catch(error){
+                console.error(error.message)
+            }
         })
         return this.NewArr
     }
@@ -192,4 +194,4 @@ const query = {
     }
 };
 const customers = db.find(query); // array of users
-console.log(db);
+console.log(customers)
