@@ -34,6 +34,9 @@ const restaurant = {
             open: 13,
             close: 20
         }
+    },
+    orderKhinkali: function(mainIngredient, ...otherIngredients){
+        console.log(`You ordered ${mainIngredient}s Khinkali with: ${otherIngredients.length? otherIngredients:'nothing'}`);
     }
 }
 
@@ -53,3 +56,19 @@ console.log(weekdays);
 
 // 2) Functions
 
+const add = function(...numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+    };
+    console.log(sum);
+}
+
+add(2,3);
+add(2,3,6,9,1,2);
+add();
+
+const nums = [1,2,3,4,5,6,7,8,9]
+add(...nums)
+
+restaurant.orderKhinkali('Xorci', 'morcxvi mwvanili')
